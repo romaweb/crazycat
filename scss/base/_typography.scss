@@ -98,11 +98,11 @@ h3,
 h4,
 h5,
 h6 {
-	font-family: $sub-heading-font-family;
-	font-style: $sub-heading-font-style;
-	font-weight: $sub-heading-font-weight;
+	font-family: $body-font-family;
+	font-style: normal;
+	font-weight: $global-weight-bold;
 	line-height: $sub-heading-line-height;
-	margin-bottom: $sub-heading-margin-bottom;
+	margin-bottom: $global-margin / 3;
 	color: $sub-heading-color;
 
 

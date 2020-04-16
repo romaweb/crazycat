@@ -1,0 +1,62 @@
+.text-page {
+  padding: $global-padding 0;
+}
+
+.text-page__wrap {
+  @include container();
+}
+
+.text-page__back-lnk {
+  margin-bottom: $global-margin;
+}
+
+.text-page__paw {
+  display: none;
+}
+
+
+@include susy-at($xsmall) {
+
+  .text-page__wrap {
+    position: relative;
+  }
+
+  .text-page__paw {
+    position: absolute;
+    z-index: -1;
+    display: block;
+    @include svg-icon();
+    fill: $light-gray;
+    top: $global-padding / 2;
+    right: 10%;
+    font-size: 10rem;
+    transform: rotate(30deg);
+  }
+
+}
+
+@include susy-at($small) {
+
+  .text-page {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .text-page__paw {
+    font-size: 12rem;
+  }
+}
+
+@include susy-at($large) {
+
+  .text-page__paw {
+    font-size: 14rem;
+  }
+}
+
+// @include susy-at($xlarge) {
+
+//   .text-page {
+//     padding: $global-padding * 2.5 0;
+//   }
+
+// }

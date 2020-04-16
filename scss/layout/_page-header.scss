@@ -13,8 +13,16 @@
     right: 0;
     top: 0; 
     bottom: 0;
-    @include gradient-y(rgba($black, 0), rgba($black, 100%));
-    
+    @include gradient-y(rgba($black, 0), rgba($black, 1));  
+  }
+
+  &--inner {
+    // background:  $dark-gray;
+
+    &::after {
+      content: '';
+      @include gradient-y(rgba($black, 0), rgba($black, .2));
+    }
   }
 }
 
@@ -143,6 +151,10 @@
 
   .page-header {
     background: $dark-gray url("../img/header-bg-large.jpg") no-repeat top center scroll;
+
+    // &--inner {
+    //   background: $black;
+    // }
   }
 
   .page-header__bottom-wrap {

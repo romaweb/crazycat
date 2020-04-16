@@ -177,19 +177,19 @@ $heading-sizes: (
     'h5': 20px,
     'h6': 16px,
   ),
-  small: (
+  medium: (
     'h1': 42px,
-    'h2': 34px,
-    'h3': 30px,
-    'h4': 28px,
-    'h5': 24px,
+    'h2': 30px,
+    'h3': 26px,
+    'h4': 24px,
+    'h5': 22px,
     'h6': 20px,
   ),
 );
 
 
 $heading-text-rendering:       optimizeLegibility;
-$heading-small-font-color:     $medium-gray;
+$heading-small-font-color:     $dark-gray;
 
 $sub-heading-font-family:      'Pattaya', Arial, sans-serif;
 $sub-heading-font-style:       normal;
@@ -200,7 +200,7 @@ $sub-heading-margin-bottom:    0;
 $sub-heading-text-rendering:   optimizeLegibility;
 
 $paragraph-line-height:        inherit;
-$paragraph-margin-bottom:      $global-margin / 3;
+$paragraph-margin-bottom:      $global-margin / 4;
 $paragraph-text-rendering:     optimizeLegibility;
 
 $anchor-color:                 $primary-color;
@@ -230,7 +230,7 @@ $blockquote-padding:           $global-padding / 2 $global-padding / 4;
 $blockquote-border:            5px solid $primary-color;
 
 $cite-font-size:               $small-font-size;
-$cite-color:                   $medium-gray;
+$cite-color:                   $dark-gray;
 
 $code-color:                   $white;
 $code-font-family:             $font-family-monospace;
