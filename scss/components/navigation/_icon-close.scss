@@ -1,0 +1,31 @@
+.icon-close {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  text-align: center;
+  font-size: 2.4rem;
+  background-color: $primary-color;
+  cursor: pointer;
+  
+  svg {
+    @include svg-icon();
+    fill: $black;
+  }
+
+
+  &:hover {
+    transition: $global-transition;
+    background-color: $secondary-color;
+  }
+
+  &--secondary {
+    background-color: $secondary-color;
+
+    &:hover {
+      background-color: $primary-color;
+    }
+  }
+
+}

@@ -1,0 +1,30 @@
+.textarea {
+	@include input-field();
+	width: 100%;
+	height: 120px;
+	background-color: $white;
+	padding: 16px 15px;
+	font-size: 1.4rem;
+	border: 2px solid transparent;
+	color: $dark-gray;
+	border-radius: $global-radius  / 5;
+	// box-shadow: $global-shadow;
+
+	&::placeholder {
+		color: darken($medium-gray, 37);
+	}
+
+	&:focus {
+		border-color: $primary-color;
+	// 	background: $white;
+	}
+}
+
+@include susy-at($large) {
+
+	.textarea {
+		padding: 18px 15px;
+		font-size: $global-font-size;
+	}
+
+}

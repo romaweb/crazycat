@@ -1,0 +1,32 @@
+.more-btn {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+
+  &:hover {
+
+    .more-btn__text {
+      color: $primary-color;
+    }
+  }
+}
+
+.more-btn__icon {
+  display: block;
+  margin-right: 2px;
+  flex:  0 0 auto;
+  font-size: 2.6rem;  
+  
+  svg {
+    @include svg-icon();
+    fill: $secondary-color;
+  }
+}
+
+.more-btn__text {
+  flex: 0 1 auto;
+  color: $white;
+  font-weight: $global-weight-semi-bold;
+  text-decoration: none;
+  transition: $global-transition;
+}

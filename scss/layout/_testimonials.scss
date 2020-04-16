@@ -1,0 +1,136 @@
+.testimonials {
+  position: relative;
+  padding: $global-padding 0;
+  z-index: 0;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: url("../img/testimonials-bg.svg") no-repeat top center scroll;
+    background-size: cover;
+  }
+}
+
+
+.testimonials__wrap {
+  @include container(460px);
+}
+
+.testimonials__testimonial-item {
+  padding: 0 15px;
+  margin-bottom: $global-margin / 1.5;
+}
+
+.testimonials__arrows {
+  @include container();
+  display: flex;
+  justify-content: center;
+}
+
+.testimonials__arrows-item {
+  @include btn();
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 46px;
+  height: 46px;
+  flex: 0 0 auto;
+  font-size: 3.2rem;
+  // line-height: 60px;
+  text-align: center;
+  border-radius: 100%;
+  background-color: $secondary-color;
+  transition: $global-transition;
+
+  &:first-child {
+    margin-right: 15px;
+  }
+
+  svg {
+    @include svg-icon();
+    fill: $white;
+  }
+
+  &:hover {
+    background-color: $primary-color;
+  }
+
+}
+
+.testimonials__paw {
+  display: none;
+}
+
+@include susy-at($xsmall) {
+
+  .testimonials__paw {
+    position: absolute;
+    display: block;
+    @include svg-icon();
+    fill: darken($light-gray, 15);
+    bottom: $global-padding;
+    right: 20%;
+    font-size: 6rem;
+    transform: rotate(30deg);
+  }
+
+}
+
+@include susy-at($small) {
+
+  .testimonials__wrap {
+    @include container();
+  }
+
+  .testimonials {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .testimonials__paw {
+    right: 30%;
+    font-size: 8rem;
+    transform: rotate(30deg);
+  }
+
+}
+
+@include susy-at($medium) {
+
+  .testimonials__arrows-item {
+    width: 50px;
+    height: 50px;
+    font-size: 3.4rem;
+  }
+
+}
+
+@include susy-at($large) {
+
+  .testimonials {
+    padding: $global-padding * 2 0;
+
+    &:after {
+      background-size: 100% 100%;
+    }
+  }
+
+  .testimonials__paw {
+    bottom: $global-padding  * 2;
+    font-size: 9rem;
+  }
+  
+}
+
+@include susy-at($xlarge) {
+
+  .testimonials {
+    padding: $global-padding * 2.5 0;
+  }
+
+}

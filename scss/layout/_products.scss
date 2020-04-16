@@ -1,0 +1,64 @@
+.products {
+  padding: $global-padding 0;
+}
+
+.produсts__wrap {
+  @include container();
+}
+
+.products__product-item {
+  margin-bottom: $global-margin / 1.5;
+  position: relative;
+  z-index: 0;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;;
+    left: -15px;
+    right: -15px;
+    top: 0;
+    bottom: 0;
+    background: url("../img/product-bg.svg") no-repeat center center scroll;
+    background-size: cover;
+  }
+
+}
+
+@include susy-at($small) {
+
+  .products {
+    padding: $global-padding * 1.5 0;
+  }
+
+}
+
+@include susy-at($large) {
+
+  .products {
+    padding: $global-padding * 2 0;
+  }
+
+  .products__product-item {
+    margin-bottom: $global-margin;
+
+    &:after {
+      background-size: 100% 100%;
+    }
+  }
+
+
+}
+
+@include susy-at($xlarge) {
+
+  .products {
+    padding: $global-padding * 2.5 0;
+  }
+
+}

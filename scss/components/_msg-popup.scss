@@ -1,0 +1,68 @@
+.msg-popup {
+  position: fixed;
+  top: -100%;
+  left: 15px;
+  right: 15px;
+  max-width: 580px;
+  padding: 15px;
+  z-index: 9;
+  margin: 0 auto;
+  background-color: $white;
+  opacity: 0;
+  transition: $global-transition;
+
+  &--active {
+    top: $global-padding;
+	  opacity: 1;
+  }
+}
+
+// .msg-popup__container {
+//   padding: 15px;
+// }
+
+.msg-popup__icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  margin-bottom: 10px;
+  font-size: 3.4rem;
+  background-color: $secondary-color;
+  border-radius: 100%;
+
+  svg {
+    @include svg-icon();
+    fill: $white;
+  }
+}
+
+.msg-popup__text {
+  display: block;
+  text-align: center;
+  margin: 0;
+  margin-bottom: $global-margin / 2;
+}
+
+.msg-popup__close {
+  margin: auto;
+}
+
+@include susy-at($large) {
+
+.msg-popup__icon {
+  width: 65px;
+  height: 65px;
+  font-size: 4.2rem;
+}
+
+	.msg-popup {
+    
+    &--active {
+      top: $global-padding * 2;
+    }
+	}
+
+}

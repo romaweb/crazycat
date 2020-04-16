@@ -1,0 +1,51 @@
+.section-heading {
+  @include heading();
+  @include container();
+  
+  margin-bottom: $global-margin / 2;
+  text-align: center;
+  font-size: 3.4rem;
+  color: $heading-color;
+
+  &--nopadding {
+    padding: 0;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  &--secondary {
+    color: $secondary-color;
+  }
+
+  &--light {
+    color: $white;
+  }
+}
+
+@include susy-at($small) {
+
+  .section-heading {
+    font-size: 4rem;
+  }
+
+}
+
+@include susy-at($medium) {
+
+  .section-heading {
+    font-size: 4.4rem;
+  }
+
+}
+
+
+@include susy-at($large) {
+
+  .section-heading {
+    margin-bottom: $global-margin;
+    font-size: 5.4rem;
+  }
+
+}

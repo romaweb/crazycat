@@ -1,0 +1,44 @@
+.contacts {
+  display: block;
+}
+
+.contacts-item {
+  margin: 0;
+  margin-bottom: $global-margin / 3;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+.contacts-item__name {
+  display: block;
+  margin: 0;
+  margin-bottom: $global-margin / 15;
+  color: $white;
+  font-weight: $global-weight-bold;
+}
+
+.contacts-item__value {
+  display: block;
+  margin: 0;
+  margin-bottom: $global-margin / 15;
+  color: $white;
+
+  &--lnk {
+    text-decoration: none;
+    transition: $global-transition;
+
+    &:hover {
+      color: $primary-color;
+    }
+  }
+
+  &--large {
+    font-size: 2rem;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

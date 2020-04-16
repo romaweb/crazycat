@@ -1,0 +1,145 @@
+.about {
+  position: relative;
+  padding: $global-padding 0;
+  z-index: 0;
+  background-color: $light-gray;
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background: url("../img/about-bg.svg") no-repeat center center scroll;
+    
+    background-size: cover;
+  }
+}
+
+.about__wrap {
+  @include container();
+}
+
+.about__text {
+  margin-bottom: $global-margin / 2;
+
+  *:last-child {
+    margin: 0;
+  }
+}
+
+.about__content {
+  margin-bottom: $global-margin / 1.5;
+}
+
+
+.about__img {
+  margin: 0;
+  padding: 0;
+  max-width: 600px;
+
+  img {
+    @include responsive-img();
+  }
+}
+
+.about__paw {
+  display: none;
+}
+
+@include susy-at($xsmall) {
+
+  .about__img {
+    position: relative;
+  }
+
+  .about__paw {
+    position: absolute;
+    display: block;
+    @include svg-icon();
+    fill: darken($light-gray, 15);
+    right: 10px;
+    bottom: 0;
+    font-size: 12rem;
+    transform: rotate(30deg);
+  }
+
+}
+
+@include susy-at($small) {
+
+  .about {
+    padding: $global-padding * 1.5 0;
+  }
+
+  .about__paw {
+    font-size: 16rem;
+    right: 15px;
+  }
+
+}
+
+@include susy-at($medium) {
+
+  .about {
+
+    &::after {
+      background-size: 100% 100%;
+      top: 0;
+      width: 75%;
+      right: auto;
+      bottom: 0;
+    }
+
+  }
+
+  .about__wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .about__content {
+    margin-bottom: 0;
+    // margin-left: span(1);
+    width: span(7);
+  }
+
+  .about__img {
+    //  margin-right: span(1);
+     width: span(5);
+   }
+
+}
+
+@include susy-at($large) {
+
+  .about {
+    padding: $global-padding * 2 0;
+  }
+
+  .about__content {
+    width: span(6 wide);
+  }
+
+  .about__img {
+    width: span(5);
+  }
+
+  .about__paw {
+    font-size: 18rem;
+  }
+
+}
+
+@include susy-at($xlarge) {
+
+  .about {
+    padding: $global-padding * 2.5 0;
+  }
+
+}
+

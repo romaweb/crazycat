@@ -1,0 +1,148 @@
+.page-footer {
+  position: relative;
+  z-index: 0;
+  padding: $global-padding 0;
+  background: $dark-gray url("../img/footer-bg.jpg") no-repeat top center scroll;
+  background-size: cover;
+
+  &::after {
+    content: '';
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0; 
+    bottom: 0;
+    @include gradient-y(rgba($black, 0.6%), rgba($black, 100%));
+    
+  }
+}
+
+.page-footer__top-wrap {
+  @include container(580px);
+  margin-bottom: $global-margin / 2;
+}
+
+.page-footer__contact-form {
+  margin-bottom: $global-margin / 1.5;
+}
+
+.page-footer__contacts {
+  margin-bottom: $global-margin / 1.5;
+}
+
+.page-footer__bottom-wrap {
+  @include container(580px);
+}
+
+.page-footer__copyright {
+  margin: 0;
+  color: $white;
+  font-size: $small-font-size;
+}
+
+.page-footer__page-logo {
+  width: 80px;
+}
+
+.page-footer__additional-nav {
+  margin-bottom: $global-margin / 3;
+}
+
+.page-footer__page-logo {
+  margin-bottom: $global-margin / 3;
+}
+
+@include susy-at($small) {
+
+  .page-footer {
+    padding: $global-padding * 1.5 0;
+  }
+
+}
+
+@include susy-at($medium) {
+
+  .page-footer__top-wrap {
+    @include container();
+  }
+
+  .page-footer__bottom-wrap {
+    @include container();
+  }
+
+
+  .page-footer__bottom-wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .page-footer__page-logo {
+    width: 110px;
+    margin: 0;
+    align-self: center;
+  }
+
+  .page-footer__additional-nav {
+    margin-bottom: 0;
+    margin-right: gutter();
+  }
+
+  .page-footer__copyright {
+    width: span(3);
+    margin-left: gutter();
+  }
+
+
+  .page-footer__top-wrap {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .page-footer__instagram-block {
+    width: span(3);
+  }
+
+  .page-footer__contacts {
+    width: span(4);
+  }
+
+  .page-footer__contact-form {
+    width: span(5);
+  }
+
+  // .page-footer__instagram-block {
+  //   width: span(3);
+  // }
+
+  // .page-footer__contacts {
+  //   width: span(3);
+  // }
+
+  // .page-footer__contact-form {
+  //   width: span(4);
+  // }
+
+}
+
+@include susy-at($large) {
+
+  .page-footer {
+    padding: $global-padding * 2 0;
+  }
+
+  .page-footer__instagram-block {
+    width: span(3);
+  }
+
+  .page-footer__contacts {
+    width: span(3);
+  }
+
+  .page-footer__contact-form {
+    width: span(4);
+  }
+
+}
