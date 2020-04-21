@@ -13,7 +13,7 @@
     right: 0;
     top: 0; 
     bottom: 0;
-    @include gradient-y(rgba($black, 0), rgba($black, 1));  
+    @include gradient-y(rgba($black, .1), rgba($black, .85));  
   }
 
   &--inner {
@@ -106,6 +106,11 @@
 
   .page-header__slogan {
     font-size: 4.4rem;
+    width: span(6);
+  }
+
+  .page-header__descr {
+    width: span(5);
   }
 
 }
@@ -126,6 +131,7 @@
   }
 
   .page-header__slogan {
+    width: span(5);
     font-size: 4.8rem;
 
     br {
@@ -138,24 +144,39 @@
   }
 
   .page-header__descr {
+    width: span(4);
     margin: 0;
-    width: 680px;
     margin-bottom: $global-margin * 1.2;
   }
 
 }
 
+@include susy-at($medium) {
 
+  .page-header {
+    background: $dark-gray url("../img/header-bg-large.jpg") no-repeat center center scroll;
+  }
+
+  .page-header__descr {
+    // max-width: 680px;
+    width: span(7);
+  }
+
+  .page-header__slogan {
+    // max-width: 860px;
+    width: span(10);
+  }
+}
 
 @include susy-at($large) {
 
-  .page-header {
-    background: $dark-gray url("../img/header-bg-large.jpg") no-repeat top center scroll;
+  // .page-header {
+    // background: $dark-gray url("../img/header-bg-large.jpg") no-repeat center center scroll;
 
     // &--inner {
     //   background: $black;
     // }
-  }
+  // }
 
   .page-header__bottom-wrap {
     position: relative;
@@ -164,12 +185,14 @@
   }
 
   .page-header__slogan {
+    // max-width: 960px;
+    width: span(10);
     font-size: 6.4rem;
     margin-bottom: $global-margin / 1.5;
   }
 
   .page-header__descr {
-    width: 780px;
+    width: span(7);
     margin-bottom: $global-margin * 2;
   }
 
@@ -191,13 +214,11 @@
     padding: 0;
     position: absolute;
     top: $global-margin;
-    right: 100px;
-    // animation: 3s rotate linear infinite;
-    // transform-origin: -80px -80px;
+    // right: 100px;
+    right: 30px;
 
     img {
       @include responsive-img();
-      // max-width: 320px;
       position: absolute;
       animation: 3s rotate linear infinite;
     }
@@ -213,6 +234,11 @@
 
   .page-header__slogan {
     font-size: 7.2rem;
+    width: span(9);
+  }
+
+  .page-header__descr {
+    width: span(6);
   }
 
 }
